@@ -4,7 +4,8 @@
 
 ## Binôme
 
-- Nom Prénom - pseudo github
+- GABRIEL Armand - armand-gabriel
+- Martin Eliott - Eliotttttttttttt
 - Nom Prénom - pseudo github
 
 ## Sujet

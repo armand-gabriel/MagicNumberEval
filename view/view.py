@@ -4,19 +4,23 @@ from common.icontroller import IController
 
 
 class View(IView):
-    # To be completed
-
     def setActionPerformer(self, actionPerformer: IController) -> None:
-        pass
+        self.actionPerformer = actionPerformer
 
     def setModel(self, model: IModel) -> None:
-        pass
+        self.model = model
 
-    def setController(self, model: IController) -> None:
-        pass
+    def setController(self, controller: IController) -> None:
+        self.controller = controller
 
     def showMessage(self, message: str) -> None:
-        pass
+        print(message)
 
     def askProposal(self) -> int:
-        pass
+        proposal_count = self.model.getProposalCount()
+        max_number_proposal = self.model.getMaxNumberOfProposals()
+        remaining_count = max_number_proposal - proposal_count
+
+        print("Il vous reste " + str(remaining_count) + " tentatives.")
+        proposition = int(input("Entrez une proposition de nombre : "))
+        return proposition
