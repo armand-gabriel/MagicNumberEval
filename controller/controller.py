@@ -20,4 +20,11 @@ class Controller(IController):
             self.view.showMessage(f"Vous avez épuisé vos tentatives. Le nombre était {self.model.magicNumber}.")
 
     def performProposeNumber(self, num: int) -> None:
-        pass
+        result = self.model.compareToMagicNumber(num)
+
+        if result < 0:
+            self.view.showMessage("Trop petit")
+        elif result > 0:
+            self.view.showMessage("Trop grand")
+        else:
+            self.view.showMessage("Nombre trouvé !")

@@ -7,13 +7,22 @@ class Model(IModel):
     # To be completed
 
     def __init__(self):
-        pass
+        self.magicNumber = random.randint(1, 100)
+        self.proposalCount = 0
+        self.maxNumberOfProposals = 10
 
     def compareToMagicNumber(self, num: int) -> int:
-        pass
+        self.proposalCount += 1
+
+        if num < self.magicNumber:
+            return -1
+        elif num > self.magicNumber:
+            return 1
+        else:
+            return 0
 
     def getProposalCount(self) -> int:
-        pass
+        return self.proposalCount
 
     def getMaxNumberOfProposals(self) -> int:
-        pass
+        return self.maxNumberOfProposals

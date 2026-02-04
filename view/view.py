@@ -20,7 +20,6 @@ class View(IView):
         proposal_count = self.model.getProposalCount()
         max_number_proposal = self.model.getMaxNumberOfProposals()
         remaining_count = max_number_proposal - proposal_count
-
         print("Il vous reste " + str(remaining_count) + " tentatives.")
         proposition = int(input("Entrez une proposition de nombre : "))
         return proposition
